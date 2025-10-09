@@ -1,0 +1,11 @@
+[package]
+name = "chuletario"
+version = "1.0.0"
+entrypoint = "plantilla.typ"
+authors = ["Alvinceleste2"]
+license = "MIT"
+description = "Plantilla para chuletarios y apuntes"
+
+[template]
+path = "template"
+entrypoint = "chuletario.typ"
