@@ -60,6 +60,11 @@ show heading.where(level: 1): it => [
   #text("Tema") #counter(heading).display() #it.body
 ]
 
+show heading.where(level: 2): it => [
+  #pagebreak()
+  #set align(center)
+]
+
 set page(
   header: [
     #align(center, title)
