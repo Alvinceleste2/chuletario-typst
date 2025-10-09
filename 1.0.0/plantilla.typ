@@ -57,12 +57,12 @@ outline()
 show heading.where(level: 1): it => [
   #pagebreak()
   #set align(center)
-  #text("Tema") #counter(heading).display() #it.body
+  #text("TEMA") #counter(heading).display() #upper[#it.body]
 ]
 
 show heading.where(level: 2): it => [
   #set align(center)
-  #counter(heading).display() #it.body
+  #counter(heading).display() #upper[#it.body]
 ]
 
 set page(
