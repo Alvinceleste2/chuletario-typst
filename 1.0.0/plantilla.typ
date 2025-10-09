@@ -61,8 +61,8 @@ show heading.where(level: 1): it => [
 ]
 
 show heading.where(level: 2): it => [
-  #pagebreak()
   #set align(center)
+  #counter(heading).display() #it.body
 ]
 
 set page(
