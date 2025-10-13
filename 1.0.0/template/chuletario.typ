@@ -8,7 +8,7 @@
 #set-inherited-levels(1)
 #set-zero-fill(true)
 #set-leading-zero(true)
-#set-theorion-numbering("1.")
+#set-theorion-numbering("1.1")
 
 // 2. Other options:
 // #set-result("noanswer") // Deletes the demos.
