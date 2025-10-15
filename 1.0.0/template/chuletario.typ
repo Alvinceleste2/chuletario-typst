@@ -14,6 +14,14 @@
 // #set-result("noanswer") // Deletes the demos.
 // #set-qed-symbol[#math.qed] // Changes qed symbol for proofs.
 
+// Makes corollary numbering same as the rest of objects.
+#let (corollary-counter, corollary-box, corollary, show-corollary) = make-frame(
+  "corollary",
+  theorion-i18n-map.at("corollary"),
+  counter: theorem-counter,
+  render: render-fn.with(fill: fuchsia.darken(10%)),
+)
+
 #show: conf.with(
   title: "TITLE",
   author: "AUTHOR",
