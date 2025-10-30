@@ -52,20 +52,35 @@ align(center)[
   ]
 ]
 
+// Permite generar apartados sin numeración en el índice.
+show outline.entry: it => {
+  if it.element.at("label", default: none) == <unnumbered> {
+    // style this as you wish
+    return [#it.body() #box(width: 1fr, repeat(gap: 0.15em)[.]) #it.page() \ ]
+  }
+  it
+}
+
 outline()
 
-show heading.where(level: 1): it => [
-  #pagebreak()
-  #set text(hyphenate: false)
-  #set par(justify: false)
-  #set align(center)
-  #text("TEMA") #counter(heading).display() #upper[#it.body]
-]
+show heading.where(level: 1): it => {
+  pagebreak()
+  set text(hyphenate: false)
+  set par(justify: false)
+  set align(center)
+
+  if it.at("label", default: none) != <unnumbered> {
+    // style this as you wish
+    text("TEMA") 
+    counter(heading).display()
+  }
+  upper[#it.body]
+}
 
 show heading.where(level: 2): it => [
-  #set align(center)
   #set text(hyphenate: false)
   #set par(justify: false)
+  #set align(center)
   #counter(heading).display() #upper[#it.body]
 ]
 
