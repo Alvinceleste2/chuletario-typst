@@ -1,6 +1,6 @@
 #import "@local/chuletario:1.0.0": conf
 
-#import "@preview/theorion:0.4.0": *
+#import "@preview/theorion:0.4.1": *
 #import cosmos.rainbow: *
 #show: show-theorion
 
