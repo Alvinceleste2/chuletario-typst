@@ -60,12 +60,20 @@ show heading.where(level: 1): it => {
   set par(justify: false)
   set align(center)
 
-  if it.at("label", default: none) != <unnumbered> {
+  if it.at("label", default: none) != <anexo> {
     // style this as you wish
     text("TEMA ") 
     counter(heading).display()
     text(" ")
   }
+
+  if it.at("label", default: none) == <anexo> {
+    // style this as you wish
+    text("ANEXO ") 
+    counter(heading).display()
+    text(" ")
+  }
+
   upper[#it.body]
 }
 
@@ -74,15 +82,13 @@ show heading.where(level: 2): it => {
   set par(justify: false)
   set align(center)
 
-  if it.at("label", default: none) != <unnumbered> {
+  if it.at("label", default: none) != <anexo> {
     // style this as you wish
     counter(heading).display()
     text(" ")
   }
   upper[#it.body]
 }
-
-show heading.where(label: <unnumbered>): set heading(numbering: none)
 
 set page(
   header: [
