@@ -12,7 +12,7 @@ git clone git@github.com:Alvinceleste2/chuletario-typst.git ~/.local/share/typst
 Una vez instalada la plantilla, podemos inicializar un nuevo documento a partir de la misma ejecutando:
 
 ```
-typst init @local/informe <nombre>
+typst init @local/chuletario <nombre>
 ```
 
 donde `nombre` es el nombre que queremos dar a la carpeta que contendrá al documento.
